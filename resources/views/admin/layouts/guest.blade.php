@@ -27,7 +27,7 @@
         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
     :class="{'dark text-bodydark bg-boxdark-2': darkMode === true}">
     {{-- Preloader --}}
-    @include('admin.partials.preloader')
+    @include('admin.layouts.preloader')
 
     <!-- Wrapper Start -->
     <div class="flex h-screen overflow-hidden">

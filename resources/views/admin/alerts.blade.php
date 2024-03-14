@@ -4,15 +4,7 @@
     <x-slot name="page">alerts</x-slot>
 
     <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-        <!-- Breadcrumb Start -->
-        <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <h2 class="text-title-md2 font-bold text-black dark:text-white">
-                Alerts
-            </h2>
-
-            <x-admin.breadcrumb page="Alerts" />
-        </div>
-        <!-- Breadcrumb End -->
+        <x-admin.breadcrumb page="Alerts" />
 
         <div class="rounded-sm border border-stroke bg-white p-4 shadow-default dark:border-strokedark dark:bg-boxdark md:p-6 xl:p-9">
             <div class="flex flex-col gap-7.5">

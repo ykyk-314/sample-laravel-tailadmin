@@ -5,15 +5,7 @@
 
     <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
         <div class="mx-auto max-w-270">
-            <!-- Breadcrumb Start -->
-            <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <h2 class="text-title-md2 font-bold text-black dark:text-white">
-                    Settings Page
-                </h2>
-
-                <x-admin.breadcrumb page="Settings" />
-            </div>
-            <!-- Breadcrumb End -->
+            <x-admin.breadcrumb page="Settings" />
 
             <!-- ====== Settings Section Start -->
             <div class="grid grid-cols-5 gap-8">

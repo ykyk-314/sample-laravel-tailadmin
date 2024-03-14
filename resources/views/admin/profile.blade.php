@@ -5,15 +5,7 @@
 
     <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
         <div class="mx-auto max-w-242.5">
-            <!-- Breadcrumb Start -->
-            <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <h2 class="text-title-md2 font-bold text-black dark:text-white">
-                    Profile
-                </h2>
-
-                <x-admin.breadcrumb page="Profile" />
-            </div>
-            <!-- Breadcrumb End -->
+            <x-admin.breadcrumb page="Profile" />
 
             <!-- ====== Profile Section Start -->
             <div class="overflow-hidden rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
