@@ -29,9 +29,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::prefix('admin')->as('admin.')->group(function () {
-    Route::get('/', function () {
-        return view('admin.index');
-    })->name('index');
+    Route::get('/', fn() => view('admin.index'))->name('index');
+
+    Route::get('calendar', fn() => view('admin.calendar'))->name('calendar');
 });
 
 require __DIR__.'/auth.php';
