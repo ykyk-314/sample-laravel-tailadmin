@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::prefix('admin')->as('admin.')->group(function () {
+    // Layouts
     Route::get('/', fn() => view('admin.index'))->name('index');
 
     Route::get('login', fn() => view('admin.signin'))->name('login');
@@ -52,6 +53,9 @@ Route::prefix('admin')->as('admin.')->group(function () {
     Route::get(('alerts'), fn() => view('admin.alerts'))->name('alerts');
 
     Route::get('buttons', fn() => view('admin.buttons'))->name('buttons');
+
+    // Samples
+    Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
 });
 
 require __DIR__.'/auth.php';
