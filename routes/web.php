@@ -28,4 +28,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::prefix('admin')->as('admin.')->group(function () {
+    Route::get('/', function () {
+        // admin/index.htmlを返す
+        return view('admin.index');
+    })->name('index');
+});
+
 require __DIR__.'/auth.php';
