@@ -92,9 +92,4 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('ApexChartsの読み込み中にエラーが発生しました', error);
         }
     }
-
-    if (document.querySelector('#map1')) {
-        const { default: map01 } = await import('./components/map-01');
-        map01();
-    }
 });

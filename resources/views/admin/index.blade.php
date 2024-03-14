@@ -151,8 +151,6 @@
 
             @include('admin.partials.chart-03')
 
-            @include('admin.partials.map-01')
-
             <div class="col-span-12 xl:col-span-8">
                 @include('admin.partials.table-01')
             </div>
