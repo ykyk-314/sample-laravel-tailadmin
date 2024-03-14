@@ -3,7 +3,7 @@
     @click.outside="sidebarToggle = false">
     <!-- SIDEBAR HEADER -->
     <div class="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
-        <a href="">
+        <a href="{{ route('admin.index') }}">
             <img src="/images/logo/logo.svg" alt="AdminLogo" />
         </a>
 
@@ -59,7 +59,7 @@
                         <div class="translate transform overflow-hidden" :class="(selected === 'Dashboard') ? 'block' : 'hidden'">
                             <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                                 <li>
-                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="index.html"
+                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="{{ route('admin.index') }}"
                                         :class="page === 'ecommerce' && '!text-white'">eCommerce
                                     </a>
                                 </li>
@@ -88,7 +88,7 @@
                     <!-- Menu Item Profile -->
                     <li>
                         <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                            href="profile.html" @click="selected = (selected === 'Profile' ? '':'Profile')"
+                            href="{{ route('admin.profile') }}" @click="selected = (selected === 'Profile' ? '':'Profile')"
                             :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Profile') && (page === 'profile') }" :class="page === 'profile' && 'bg-graydark'">
                             <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -141,11 +141,11 @@
                         <div class="translate transform overflow-hidden" :class="(selected === 'Forms') ? 'block' : 'hidden'">
                             <ul class="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
                                 <li>
-                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="form-elements.html"
+                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="{{ route('admin.form-elements') }}"
                                         :class="page === 'formElements' && '!text-white'">Form Elements</a>
                                 </li>
                                 <li>
-                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="form-layout.html"
+                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="{{ route('admin.form-layout') }}"
                                         :class="page === 'formLayout' && '!text-white'">Form Layout</a>
                                 </li>
                             </ul>
@@ -157,7 +157,7 @@
                     <!-- Menu Item Tables -->
                     <li>
                         <a class="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                            href="tables.html" @click="selected = (selected === 'Tables' ? '':'Tables')"
+                            href="{{ route('admin.tables') }}" @click="selected = (selected === 'Tables' ? '':'Tables')"
                             :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Tables') && (page === 'tables') }">
                             <svg class="fill-current" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_130_9756)">
@@ -180,7 +180,7 @@
                     <!-- Menu Item Settings -->
                     <li>
                         <a class="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                            href="settings.html" @click="selected = (selected === 'Settings' ? '':'Settings')"
+                            href="{{ route('admin.settings') }}" @click="selected = (selected === 'Settings' ? '':'Settings')"
                             :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Settings') && (page === 'settings') }" :class="page === 'settings' && 'bg-graydark'">
                             <svg class="fill-current" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_130_9763)">
@@ -213,7 +213,7 @@
                     <!-- Menu Item Chart -->
                     <li>
                         <a class="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                            href="chart.html" @click="selected = (selected === 'Chart' ? '':'Chart')"
+                            href="{{ route('admin.chart') }}" @click="selected = (selected === 'Chart' ? '':'Chart')"
                             :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Chart') && (page === 'Chart') }">
                             <svg class="fill-current" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_130_9801)">
@@ -274,12 +274,12 @@
                         <div class="translate transform overflow-hidden" :class="(selected === 'UiElements') ? 'block' : 'hidden'">
                             <ul class="mb-3 mt-4 flex flex-col gap-2 pl-6">
                                 <li>
-                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="alerts.html"
+                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="{{ route('admin.alerts') }}"
                                         :class="page === 'alerts' && '!text-white'">Alerts</a>
                                 </li>
 
                                 <li>
-                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="buttons.html"
+                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="{{ route('admin.buttons') }}"
                                         :class="page === 'buttons' && '!text-white'">Buttons</a>
                                 </li>
                             </ul>
@@ -323,11 +323,15 @@
                         <div class="translate transform overflow-hidden" :class="(selected === 'AuthPages') ? 'block' : 'hidden'">
                             <ul class="mb-3 mt-4 flex flex-col gap-2 pl-6">
                                 <li>
-                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="signin.html"
+                                    <a 
+                                        class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" 
+                                        href="{{ route('admin.login') }}"
                                         :class="page === 'signin' && '!text-white'">Sign In</a>
                                 </li>
                                 <li>
-                                    <a class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" href="signup.html"
+                                    <a
+                                        class="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white" 
+                                        href="{{ route('admin.signup') }}"
                                         :class="page === 'signup' && '!text-white'">Sign Up</a>
                                 </li>
                             </ul>

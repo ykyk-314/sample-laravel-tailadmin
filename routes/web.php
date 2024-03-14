@@ -31,7 +31,27 @@ Route::middleware('auth')->group(function () {
 Route::prefix('admin')->as('admin.')->group(function () {
     Route::get('/', fn() => view('admin.index'))->name('index');
 
+    Route::get('login', fn() => view('admin.signin'))->name('login');
+
+    Route::get('signup', fn() => view('admin.signup'))->name('signup');
+
     Route::get('calendar', fn() => view('admin.calendar'))->name('calendar');
+
+    Route::get('profile', fn() => view('admin.profile'))->name('profile');
+
+    Route::get('settings', fn() => view('admin.settings'))->name('settings');
+
+    Route::get('tables', fn() => view('admin.tables'))->name('tables');
+
+    Route::get('chart', fn() => view('admin.chart'))->name('chart');
+
+    Route::get('form-elements', fn() => view('admin.form-elements'))->name('form-elements');
+
+    Route::get('form-layout', fn() => view('admin.form-layout'))->name('form-layout');
+
+    Route::get(('alerts'), fn() => view('admin.alerts'))->name('alerts');
+
+    Route::get('buttons', fn() => view('admin.buttons'))->name('buttons');
 });
 
 require __DIR__.'/auth.php';
