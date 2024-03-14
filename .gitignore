@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/storage
+/public/bundle-analysis.html
 /storage/*.key
 /vendor
 .env

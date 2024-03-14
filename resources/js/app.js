@@ -1,24 +1,16 @@
 import './bootstrap';
 // css
-import './../css/satoshi.css';
+import './../css/font-satoshi.css';
 import './../css/style.css';
 
 import Alpine from 'alpinejs';
-
-// Tailadmin
 import persist from '@alpinejs/persist';
 import flatpickr from 'flatpickr';
-import chart01 from './components/chart-01';
-import chart02 from './components/chart-02';
-import chart03 from './components/chart-03';
-import chart04 from './components/chart-04';
-import map01 from './components/map-01';
 
 // AlpineJSプラグインの追加
 Alpine.plugin(persist);
 
 window.Alpine = Alpine;
-
 Alpine.start();
 
 // Init flatpickr
@@ -55,11 +47,54 @@ flatpickr(".form-datepicker", {
         '<svg class="fill-current" width="7" height="11" viewBox="0 0 7 11"><path d="M1.4 10.8L0 9.4l4-4-4-4L1.4 0l5.4 5.4z" /></svg>',
 });
 
-// Document Loaded
-document.addEventListener('DOMContentLoaded', () => {
-    chart01();
-    chart02();
-    chart03();
-    chart04();
-    map01();
+// ApexChartsをCDNから動的に読み込む関数
+const loadApexCharts = () => {
+    return new Promise((resolve, reject) => {
+        if (window.ApexCharts) {
+            resolve(window.ApexCharts);
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = "https://cdn.jsdelivr.net/npm/apexcharts";
+        script.onload = () => resolve(window.ApexCharts);
+        script.onerror = () => reject(new Error('ApexChartsの読み込みに失敗しました'));
+        document.head.appendChild(script);
+    });
+}
+
+// 動的にチャートコンポーネントを読み込む
+document.addEventListener('DOMContentLoaded', async () => {
+    const isChartPage = document.querySelector('#chartOne') || document.querySelector('#chartTwo') || document.querySelector('#chartThree') || document.querySelector('#chartFour');
+    if (isChartPage) {
+        try {
+            await loadApexCharts();
+            console.log('ApexCharts loaded');
+
+            if (document.querySelector('#chartOne')) {
+                const { default: chart01 } = await import('./components/chart-01');
+                chart01();
+            }
+            if (document.querySelector('#chartTwo')) {
+                const { default: chart02 } = await import('./components/chart-02');
+                chart02();
+            }
+            if (document.querySelector('#chartThree')) {
+                const { default: chart03 } = await import('./components/chart-03');
+                chart03();
+            }
+            if (document.querySelector('#chartFour')) {
+                const { default: chart04 } = await import('./components/chart-04');
+                chart04();
+            }
+        
+        } catch (error) {
+            console.error('ApexChartsの読み込み中にエラーが発生しました', error);
+        }
+    }
+
+    if (document.querySelector('#map1')) {
+        const { default: map01 } = await import('./components/map-01');
+        map01();
+    }
 });
