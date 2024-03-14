@@ -31,7 +31,7 @@
     >
       <div class="flex items-center gap-3 p-2.5 xl:p-5">
         <div class="flex-shrink-0">
-          <img src="./images/brand/brand-01.svg" alt="Brand" />
+          <img src="/images/brand/brand-01.svg" alt="Brand" />
         </div>
         <p class="hidden font-medium text-black dark:text-white sm:block">
           Google
@@ -60,7 +60,7 @@
     >
       <div class="flex items-center gap-3 p-2.5 xl:p-5">
         <div class="flex-shrink-0">
-          <img src="./images/brand/brand-02.svg" alt="Brand" />
+          <img src="/images/brand/brand-02.svg" alt="Brand" />
         </div>
         <p class="hidden font-medium text-black dark:text-white sm:block">
           Twitter
@@ -89,7 +89,7 @@
     >
       <div class="flex items-center gap-3 p-2.5 xl:p-5">
         <div class="flex-shrink-0">
-          <img src="./images/brand/brand-03.svg" alt="Brand" />
+          <img src="/images/brand/brand-03.svg" alt="Brand" />
         </div>
         <p class="hidden font-medium text-black dark:text-white sm:block">
           Github
@@ -118,7 +118,7 @@
     >
       <div class="flex items-center gap-3 p-2.5 xl:p-5">
         <div class="flex-shrink-0">
-          <img src="./images/brand/brand-04.svg" alt="Brand" />
+          <img src="/images/brand/brand-04.svg" alt="Brand" />
         </div>
         <p class="hidden font-medium text-black dark:text-white sm:block">
           Vimeo
@@ -145,7 +145,7 @@
     <div class="grid grid-cols-3 sm:grid-cols-5">
       <div class="flex items-center gap-3 p-2.5 xl:p-5">
         <div class="flex-shrink-0">
-          <img src="./images/brand/brand-05.svg" alt="Brand" />
+          <img src="/images/brand/brand-05.svg" alt="Brand" />
         </div>
         <p class="hidden font-medium text-black dark:text-white sm:block">
           Facebook
